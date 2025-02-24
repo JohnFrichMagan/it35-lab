@@ -25,9 +25,6 @@ import {
     return (
       <IonPage>
         <IonHeader>
-          <IonToolbar>
-            <IonTitle>Login</IonTitle>
-          </IonToolbar>
         </IonHeader>
         <IonContent className='ion-padding'>
         
@@ -62,7 +59,7 @@ import {
           </IonGrid>
           <IonInput label="Username" >
           </IonInput>
-          <IonInput type="password" label="Password" value="NeverGonnaGiveYouUp">
+          <IonInput type="password" label="Password" value="gg">
             <IonInputPasswordToggle  slot="end"></IonInputPasswordToggle>
           </IonInput>
           <IonButton onClick={() => doLogin()} expand="full">
