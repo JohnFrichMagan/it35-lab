@@ -25,7 +25,7 @@ import {
         </IonHeader>
         <IonContent fullscreen>
             <IonCard>
-              <img alt="Silhouette of mountains" src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/luffy-big-smile.png" />
+              <img alt="Silhouette of mountains" src="https://www.slashfilm.com/img/gallery/one-piece-film-red-showcases-luffys-new-transformation-for-the-first-time/l-intro-1667316814.jpg" />
               <IonCardHeader>
                 <IonCardTitle>Card Title</IonCardTitle>
                 <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
