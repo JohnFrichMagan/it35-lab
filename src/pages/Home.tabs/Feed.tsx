@@ -12,7 +12,7 @@ import {
       IonTitle, 
       IonToolbar 
   } from '@ionic/react';
-  const Feed: React.FC = () => {
+  import FeedContainer from '../../components/FeedContainer';
     return (
       <IonPage>
         <IonHeader>
@@ -39,9 +39,10 @@ import {
           As one of the Monster Trio, alongside Luffy and Sanji, Zoro is one of the most feared pirates in the world. His bounty continues to rise as he takes on legendary foes, proving himself as Luffy’s strongest right-hand man. With each battle, he moves closer to his goal of surpassing Mihawk and becoming the world’s greatest swordsman, solidifying his place as one of the most iconic warriors in One Piece.
       </IonCardContent>
     </IonCard>
+    
         
         </IonContent>
       </IonPage>
     );
   };
-  export default Feed;
+  export default FeedContainer;
