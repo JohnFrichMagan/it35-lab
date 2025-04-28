@@ -1,3 +1,4 @@
+// imports
 import { 
   IonAlert, 
   IonAvatar, 
@@ -9,8 +10,10 @@ import {
   IonToast, 
   IonCard, 
   IonCardContent,
+  IonIcon, // <-- Add this!
   useIonRouter 
 } from '@ionic/react';
+import { logoFacebook, logoInstagram, mailOutline } from 'ionicons/icons'; // <-- Add icons
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
@@ -52,32 +55,30 @@ const Login: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="ion-padding" style={{ backgroundColor: '#f4f4f4' }}>
-        {/* Container (IonCard) for Login Form */}
         <IonCard style={{
           maxWidth: '400px',
           margin: 'auto',
           padding: '20px',
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
           borderRadius: '12px',
-          background: 'fff',
+          background: '#fff', // Fix missing '#'
         }}>
           <IonCardContent style={{ textAlign: 'center' }}>
-            
-            {/* Avatar inside the card */}
+
             <div style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              marginBottom: '20px',  // space between avatar and form
+              marginBottom: '20px',
             }}>
               <IonAvatar
                 style={{
                   width: '120px',
                   height: '120px',
-                  borderRadius: '50%',  // Makes the avatar a circle
+                  borderRadius: '50%',
                   overflow: 'hidden',
-                  marginBottom: '10px',  // space between avatar and heading
-                  border: '4px solid #007bff',  // Optional: Add a border around the avatar
+                  marginBottom: '10px',
+                  border: '4px solid #007bff',
                 }}
               >
                 <img
@@ -103,7 +104,7 @@ const Login: React.FC = () => {
                 width: '100%',
                 marginBottom: '15px',
                 padding: '12px',
-                borderRadius: '50px', // Fully rounded border
+                borderRadius: '50px',
               }}
             />
 
@@ -113,7 +114,7 @@ const Login: React.FC = () => {
                 width: '100%',
                 marginBottom: '20px',
                 padding: '12px',
-                borderRadius: '50px', // Fully rounded border
+                borderRadius: '50px',
               }}
               label="Password"
               labelPlacement="floating"
@@ -134,16 +135,16 @@ const Login: React.FC = () => {
               shape="round" 
               style={{
                 marginBottom: '15px',
-                background: 'linear-gradient(45deg, #007bff, #00c6ff)', // Gradient background
+                background: 'linear-gradient(45deg, #007bff, #00c6ff)',
                 color: '#000',
                 padding: '12px',
                 fontSize: '16px',
-                borderRadius: '50px', // Rounded corners for the button
-                boxShadow: '0 4px 6px rgba(247, 249, 252, 0.4)', // Subtle shadow
-                transition: 'all 0.3s ease-in-out', // Smooth transition
+                borderRadius: '50px',
+                boxShadow: '0 4px 6px rgba(247, 249, 252, 0.4)',
+                transition: 'all 0.3s ease-in-out',
               }}
-              onIonFocus={(e) => e.target.style.transform = 'scale(1.05)'} // Slight zoom effect on focus
-              onIonBlur={(e) => e.target.style.transform = 'scale(1)'} // Reset zoom effect
+              onIonFocus={(e) => e.target.style.transform = 'scale(1.05)'}
+              onIonBlur={(e) => e.target.style.transform = 'scale(1)'}
             >
               Login
             </IonButton>
@@ -162,13 +163,30 @@ const Login: React.FC = () => {
               Don't have an account? Register here
             </IonButton>
 
+            {/* --- Add Icons Below --- */}
+            <div style={{
+              marginTop: '25px',
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '20px',
+            }}>
+              <IonButton fill="clear" color="primary" size="small">
+                <IonIcon icon={logoFacebook} style={{ fontSize: '24px' }} />
+              </IonButton>
+              <IonButton fill="clear" color="danger" size="small">
+                <IonIcon icon={logoInstagram} style={{ fontSize: '24px' }} />
+              </IonButton>
+              <IonButton fill="clear" color="medium" size="small">
+                <IonIcon icon={mailOutline} style={{ fontSize: '24px' }} />
+              </IonButton>
+            </div>
+            {/* --- Icons End --- */}
+
           </IonCardContent>
         </IonCard>
 
-        {/* Reusable AlertBox Component */}
         <AlertBox message={alertMessage} isOpen={showAlert} onClose={() => setShowAlert(false)} />
 
-        {/* IonToast for success message */}
         <IonToast
           isOpen={showToast}
           onDidDismiss={() => setShowToast(false)}
