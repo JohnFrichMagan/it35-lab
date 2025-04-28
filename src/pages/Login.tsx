@@ -13,7 +13,7 @@ import {
   IonIcon, // <-- Add this!
   useIonRouter 
 } from '@ionic/react';
-import { logoFacebook, logoInstagram, mailOutline } from 'ionicons/icons'; // <-- Add icons
+import { colorFill, logoFacebook, logoInstagram, mailOutline } from 'ionicons/icons'; // <-- Add icons
 import { useState } from 'react';
 import { supabase } from '../utils/supabaseClient';
 
@@ -78,7 +78,7 @@ const Login: React.FC = () => {
                   borderRadius: '50%',
                   overflow: 'hidden',
                   marginBottom: '10px',
-                  border: '4px solid #007bff',
+                  border: '4px solid rgb(46, 190, 10)',
                 }}
               >
                 <img
@@ -96,6 +96,7 @@ const Login: React.FC = () => {
               labelPlacement="floating"
               fill="outline"
               shape="round"
+              color={'success'}
               type="email"
               placeholder="Enter Email"
               value={email}
@@ -120,6 +121,7 @@ const Login: React.FC = () => {
               labelPlacement="floating"
               fill="outline"
               shape="round" 
+              color={'success'}
               type="password"
               placeholder="Password"
               value={password}
@@ -133,16 +135,7 @@ const Login: React.FC = () => {
               onClick={doLogin} 
               expand="full" 
               shape="round" 
-              style={{
-                marginBottom: '15px',
-                background: 'linear-gradient(45deg, #007bff, #00c6ff)',
-                color: '#000',
-                padding: '12px',
-                fontSize: '16px',
-                borderRadius: '50px',
-                boxShadow: '0 4px 6px rgba(247, 249, 252, 0.4)',
-                transition: 'all 0.3s ease-in-out',
-              }}
+              color={'success'}
               onIonFocus={(e) => e.target.style.transform = 'scale(1.05)'}
               onIonBlur={(e) => e.target.style.transform = 'scale(1)'}
             >
@@ -155,6 +148,7 @@ const Login: React.FC = () => {
               expand="full"
               fill="clear"
               shape="round"
+              color={'success'}
               style={{
                 fontSize: '14px',
                 color: '#000',
