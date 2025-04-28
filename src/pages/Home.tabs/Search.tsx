@@ -28,7 +28,7 @@ const Search: React.FC = () => {
       <IonContent fullscreen>
         {/* Search Bar */}
         <div style={{ padding: '16px' }}>
-          <IonSearchbar placeholder="Search anime..." />
+          <IonSearchbar placeholder="Search" />
         </div>
 
         {/* Flex container */}

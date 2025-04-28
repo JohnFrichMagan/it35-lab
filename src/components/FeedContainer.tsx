@@ -155,7 +155,7 @@ const FeedContainer = () => {
                   className="post-input"
                   style={{ marginBottom: '12px', padding: '10px', borderRadius: '12px', background: '#f1f1f1' }}
                 />
-                <IonButton expand="block" color="primary" onClick={createPost}>
+                <IonButton expand="block" color="success" onClick={createPost}>
                   Post
                 </IonButton>
               </IonCardContent>
@@ -188,7 +188,7 @@ const FeedContainer = () => {
                 </IonCardHeader>
 
                 <IonCardContent>
-                  <IonText style={{ fontSize: '16px' }}>
+                  <IonText  color={'dark'} style={{ fontSize: '30px' }}>
                     {post.post_content}
                   </IonText>
                 </IonCardContent>
@@ -201,6 +201,7 @@ const FeedContainer = () => {
                   <IonContent className="ion-padding">
                     <IonButton
                       expand="full"
+                      color="success"
                       onClick={() => {
                         startEditingPost(post);
                         setPopoverState({ open: false, event: null, postId: null });
@@ -247,7 +248,7 @@ const FeedContainer = () => {
           <IonButton expand="block" color="success" onClick={savePost}>
             Save Changes
           </IonButton>
-          <IonButton expand="block" color="medium" onClick={() => setIsModalOpen(false)} style={{ marginTop: '8px' }}>
+          <IonButton expand="block" color="danger" onClick={() => setIsModalOpen(false)} style={{ marginTop: '8px' }}>
             Cancel
           </IonButton>
         </IonContent>

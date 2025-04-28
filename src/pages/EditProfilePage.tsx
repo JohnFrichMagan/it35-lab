@@ -172,7 +172,7 @@ const EditProfile: React.FC = () => {
           <IonHeader>
             <IonToolbar>
               <IonButtons slot="start">
-                <IonBackButton defaultHref="/it35-lab/app" />
+                <IonBackButton  defaultHref="/it35-lab/app" />
               </IonButtons>
               <IonTitle>Edit Profile</IonTitle>
             </IonToolbar>
@@ -189,7 +189,7 @@ const EditProfile: React.FC = () => {
                   )}
                   <IonButton
                     expand="block"
-                    color="secondary"
+                    color="success"
                     onClick={() => fileInputRef.current?.click()}
                     shape="round"
                     size="small"
@@ -215,6 +215,7 @@ const EditProfile: React.FC = () => {
                     type="text"
                     labelPlacement="floating"
                     fill="outline"
+                    color="success"
                     shape="round"
                     placeholder="Enter username"
                     value={username}
@@ -228,6 +229,7 @@ const EditProfile: React.FC = () => {
                 <IonCol size="6">
                   <IonInput
                     label="First Name"
+                    color="success"
                     type="text"
                     labelPlacement="floating"
                     fill="outline"
@@ -241,6 +243,7 @@ const EditProfile: React.FC = () => {
                   <IonInput
                     label="Last Name"
                     type="text"
+                    color="success"
                     labelPlacement="floating"
                     fill="outline"
                     shape="round"
@@ -266,6 +269,7 @@ const EditProfile: React.FC = () => {
                   <IonInput
                     label="New Password"
                     type="password"
+                    color="success"
                     labelPlacement="floating"
                     fill="outline"
                     shape="round"
@@ -284,6 +288,7 @@ const EditProfile: React.FC = () => {
                   <IonInput
                     label="Confirm Password"
                     type="password"
+                    color="success"
                     labelPlacement="floating"
                     fill="outline"
                     shape="round"
@@ -311,6 +316,7 @@ const EditProfile: React.FC = () => {
                   <IonInput
                     label="Current Password"
                     type="password"
+                    color="success"
                     labelPlacement="floating"
                     fill="outline"
                     shape="round"
@@ -326,7 +332,7 @@ const EditProfile: React.FC = () => {
               {/* Submit Button */}
               <IonRow className="ion-padding-vertical">
                 <IonCol>
-                  <IonButton expand="block" onClick={handleUpdate} shape="round" color="primary">
+                  <IonButton expand="block" onClick={handleUpdate} shape="round" color="success">
                     Save Changes
                   </IonButton>
                 </IonCol>
