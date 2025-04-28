@@ -198,7 +198,7 @@ const EditProfile: React.FC = () => {
                   onChange={handleAvatarChange}
                 />
   
-                <IonButton expand="block" onClick={() => fileInputRef.current?.click()}>
+                <IonButton expand="block" onClick={() => fileInputRef.current?.click() } shape="round">
                   Upload Avatar
                 </IonButton>
               </IonCol>
@@ -212,6 +212,7 @@ const EditProfile: React.FC = () => {
                 <IonInput
                   label="Username"
                   type="text"
+                  shape="round"
                   labelPlacement="floating"
                   fill="outline"
                   placeholder="Enter username"
@@ -224,6 +225,7 @@ const EditProfile: React.FC = () => {
               <IonCol size="6">
                 <IonInput
                   label="First Name"
+                  shape="round"
                   type="text"
                   labelPlacement="floating"
                   fill="outline"
@@ -235,6 +237,7 @@ const EditProfile: React.FC = () => {
               <IonCol size="6">
                 <IonInput
                   label="Last Name"
+                  shape="round"
                   type="text"
                   labelPlacement="floating"
                   fill="outline"
@@ -253,6 +256,7 @@ const EditProfile: React.FC = () => {
               <IonCol size="12">
                 <IonInput
                   label="New Password"
+                  shape="round"
                   type="password"
                   labelPlacement="floating"
                   fill="outline"
@@ -271,6 +275,7 @@ const EditProfile: React.FC = () => {
               <IonCol size="12">
                 <IonInput
                   label="Confirm Password"
+                  shape="round"
                   type="password"
                   labelPlacement="floating"
                   fill="outline"
@@ -294,6 +299,7 @@ const EditProfile: React.FC = () => {
               <IonCol size="12">
                 <IonInput
                   label="Current Password"
+                  shape="round"
                   type="password"
                   labelPlacement="floating"
                   fill="outline"
