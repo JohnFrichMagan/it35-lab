@@ -133,7 +133,7 @@ const Register: React.FC = () => {
                                         }}
                                       >
                                         <img
-                                          src="https://i.pinimg.com/736x/d0/fd/99/d0fd9905166ede4f50a00d60c9b5ebdc.jpg"
+                                          src="https://i.pinimg.com/736x/73/bf/f5/73bff5ec115f325a9bd5b3211716129c.jpg"
                                           alt="User Avatar"
                                           style={{ width: '100%', height: '100%' }}
                                         />
