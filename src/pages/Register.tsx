@@ -129,7 +129,7 @@ const Register: React.FC = () => {
                                           borderRadius: '50%',  // Makes the avatar a circle
                                           overflow: 'hidden',
                                           marginBottom: '10px',  // space between avatar and heading
-                                          border: '4px solid #007bff',  // Optional: Add a border around the avatar
+                                          border: '4px solid rgb(46, 190, 10)',  // Optional: Add a border around the avatar
                                         }}
                                       >
                                         <img
@@ -148,6 +148,7 @@ const Register: React.FC = () => {
                             labelPlacement="floating"
                             fill="outline"
                             shape="round"
+                            color={'success'}
                             type="text"
                             placeholder="Enter a unique username"
                             value={username}
@@ -159,6 +160,7 @@ const Register: React.FC = () => {
                             labelPlacement="floating"
                             fill="outline"
                             shape="round"
+                            color={'success'}
                             type="email"
                             placeholder="youremail@nbsc.edu.ph"
                             value={email}
@@ -170,6 +172,7 @@ const Register: React.FC = () => {
                             labelPlacement="floating"
                             fill="outline"
                             shape="round"
+                            color={'success'}
                             type="password"
                             placeholder="Enter password"
                             value={password}
@@ -183,6 +186,7 @@ const Register: React.FC = () => {
                             labelPlacement="floating"
                             fill="outline"
                             shape="round"
+                            color={'success'}
                             type="password"
                             placeholder="Confirm password"
                             value={confirmPassword}
@@ -197,16 +201,7 @@ const Register: React.FC = () => {
                             onClick={handleOpenVerificationModal}
                             expand="full"
                             shape="round"
-                            style={{
-                                marginBottom: '15px',
-                                background: 'linear-gradient(45deg, #007bff, #00c6ff)', // Gradient background
-                                color: '#000',
-                                padding: '12px',
-                                fontSize: '16px',
-                                borderRadius: '50px',
-                                boxShadow: '0 4px 6px rgba(0, 123, 255, 0.4)', // Subtle shadow
-                                transition: 'all 0.3s ease-in-out', // Smooth transition
-                            }}
+                            color={'success'}
                             onIonFocus={(e) => e.target.style.transform = 'scale(1.05)'}
                             onIonBlur={(e) => e.target.style.transform = 'scale(1)'}
                         >
@@ -218,6 +213,7 @@ const Register: React.FC = () => {
                             routerLink="/it35-lab"
                             expand="full"
                             fill="clear"
+                            color={'success'}
                             shape="round"
                             style={{
                                 fontSize: '14px',
@@ -246,8 +242,8 @@ const Register: React.FC = () => {
                             </IonCardHeader>
                             <IonCardContent></IonCardContent>
                             <div style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '5px' }}>
-                                <IonButton fill="clear" onClick={() => setShowVerificationModal(false)}>Cancel</IonButton>
-                                <IonButton color="primary" onClick={doRegister}>Confirm</IonButton>
+                                <IonButton  color={'dark'} fill="clear" onClick={() => setShowVerificationModal(false)}>Cancel</IonButton>
+                                <IonButton color="success" onClick={doRegister}>Confirm</IonButton>
                             </div>
                         </IonCard>
                     </IonContent>
@@ -261,7 +257,7 @@ const Register: React.FC = () => {
                             <p>Your account has been created successfully.</p>
                             <p>Please check your email address.</p>
                         </IonText>
-                        <IonButton routerLink="/it35-lab" routerDirection="back" color="primary">
+                        <IonButton routerLink="/it35-lab" routerDirection="back" color="success">
                             Go to Login
                         </IonButton>
                     </IonContent>
